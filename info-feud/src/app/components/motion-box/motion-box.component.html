@@ -1,0 +1,11 @@
+<div #boxContainer class="feud-row" (click)="revealAnswer()">
+  <div class="feud-points">
+    <span *ngIf="!isRevealed" class="static">{{ pointsPlaceholder }}</span>
+    <span *ngIf="isRevealed" #pointsText>{{ points }}</span>
+  </div>
+
+  <div class="feud-answer">
+    <span *ngIf="!isRevealed" class="static">{{ placeholder }}</span>
+    <span *ngIf="isRevealed" #answerText>{{ answer }}</span>
+  </div>
+</div>
