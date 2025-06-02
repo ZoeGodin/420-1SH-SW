@@ -1,0 +1,75 @@
+<div class="questionContainer">
+  <p id="questionText">QUESTION {{ questionNumber }}</p>
+  <app-counter [points]="maximumPoints"></app-counter>
+  <p class="questionP">{{ question.question }}</p>
+
+  <ng-container *ngFor="let response of question.responses; index as i">
+    <app-motion-box 
+      [answer]="response.response"
+      [points]="response.points"
+      [delayIndex]="i"
+      (revealed)="onBoxRevealed($event)">
+    </app-motion-box>
+  </ng-container>
+
+  <p class="questionP">RÉPONSE SPÉCIALE</p>
+  <app-motion-box 
+    class="special"
+    [answer]="specialResponse.response"
+    [points]="specialResponse.points"
+    [delayIndex]="question.responses.length"
+    (revealed)="onBoxRevealed($event)">
+  </app-motion-box>
+
+  <ng-container *ngIf="revealedCount >= totalAnswers; else revealAllBtn">
+    <button-component button-text="CONTINUER" [navigateTo]="nextButtonRoute"></button-component>
+  </ng-container>
+
+  <ng-template #revealAllBtn>
+    <button mat-button class="pointButtons" 
+      (click)="forceRevealAll()" 
+      [disabled]="readyToRevealDisabled"
+      >VOIR LES RÉPONSES
+    </button>
+  </ng-template>
+</div>
+
+<div class="strike-wrapper">
+  <div class="strikes-container left">
+    <h2>Team {{ teamService.team1Name }}</h2>
+    <h4>{{ teamService.team1Points }} points</h4>
+
+    <div
+      class="strike-box"
+      *ngFor="let strike of team1Strikes; let i = index"
+      (click)="toggleStrike('team1', i)"
+    >
+      <span class="strike-x" *ngIf="strike">✖</span>
+    </div>
+
+    <ng-container *ngIf="revealedCount >= totalAnswers">
+      <button mat-button class="pointButtons" style="color: black" (click)="addToTeam('team1')">
+        AJOUTER POINTS
+      </button>
+    </ng-container>
+  </div>
+
+  <div class="strikes-container right">
+    <h2>Team {{ teamService.team2Name }}</h2>
+    <h4>{{ teamService.team2Points }} points</h4>
+
+    <div
+      class="strike-box"
+      *ngFor="let strike of team2Strikes; let i = index"
+      (click)="toggleStrike('team2', i)"
+    >
+      <span class="strike-x" *ngIf="strike">✖</span>
+    </div>
+
+    <ng-container *ngIf="revealedCount >= totalAnswers">
+      <button mat-button class="pointButtons" style="color: black" (click)="addToTeam('team2')">
+        AJOUTER POINTS
+      </button>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+.pointText {
+    font-size: 3rem;
+    font-weight: bold;
+    color: gold; 
+    margin: 0.5rem 0;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#pointPreview {
+    display: flex;
+}
+
