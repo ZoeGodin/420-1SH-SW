@@ -20,7 +20,6 @@ export class TeamService {
 
   //Function that adds thr given points to the given team's total points
   addPoints(team: 'team1' | 'team2', points: number) {
-    console.log(team)
     if (team === 'team1'){
       this.team1Points += points;
     }
