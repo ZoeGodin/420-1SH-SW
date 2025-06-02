@@ -59,8 +59,18 @@ export class MotionBoxComponent {
   }
 
   //Function to animate the answer reveal. In a timelapse of 0.5 seconds, we make the points/answer appear (opacity from 0 to 1) from the bottom (we start at x -10 to get to their position 0) with a small scale movement (0.9 of their size to their real size 1). The points also have a slight delay so the answer shows before.
-  private animateReveal() {
+  private animateReveal(retries = 3) {
     setTimeout(() => {
+      const answerEl = this.answerTextRef?.nativeElement;
+      const pointsEl = this.pointsTextRef?.nativeElement;
+
+      if (!answerEl || !pointsEl) {
+        if (retries > 0) {
+          setTimeout(() => this.animateReveal(retries - 1), 100);
+          console.warn('Answer or points element not yet available, trying again');
+        }
+        return;
+      }
       animate(this.answerTextRef.nativeElement, {
         opacity: [0, 1],
         x: [-10, 0],
