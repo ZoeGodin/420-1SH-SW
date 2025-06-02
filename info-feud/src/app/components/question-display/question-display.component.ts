@@ -5,7 +5,7 @@ import { ButtonComponent } from '../button-component/button-component.component'
 import { CounterComponent } from '../counter/counter.component';
 import { Response } from '../../models/response.model';
 import { Question } from '../../models/question.model';
-import { TeamService } from '../../team.service';
+import { TeamService } from '../../services/team.service';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
