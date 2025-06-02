@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { QuestionDisplayComponent } from '../../../components/question-display/question-display.component';
 import { Question } from '../../../models/question.model';
 import { Response } from '../../../models/response.model';
-import { TeamService } from '../../../team.service';
+import { TeamService } from '../../../services/team.service';
 
 @Component({
   selector: 'app-question1',
