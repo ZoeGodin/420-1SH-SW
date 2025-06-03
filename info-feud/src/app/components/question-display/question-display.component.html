@@ -1,4 +1,4 @@
-<div class="questionContainer">
+<div class="questionContainer" *ngIf="question">
   <p id="questionText">QUESTION {{ questionNumber }}</p>
   <app-counter [points]="maximumPoints"></app-counter>
   <p class="questionP">{{ question.question }}</p>

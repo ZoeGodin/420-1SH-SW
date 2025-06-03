@@ -1,4 +1,5 @@
 <app-question-display
+  *ngIf="isNormalQuestion"
   [question]="question"
   [specialResponse]="specialResponse"
   [maximumPoints]="maximumPoints"

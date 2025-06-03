@@ -1,4 +1,4 @@
-import { Component, Input, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
+import { Component, Input, ViewChildren, QueryList, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MotionBoxComponent } from '../motion-box/motion-box.component';
 import { ButtonComponent } from '../button-component/button-component.component';
@@ -15,7 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './question-display.component.html',
   styleUrls: ['./question-display.component.css'],
 })
-export class QuestionDisplayComponent {
+export class QuestionDisplayComponent implements OnInit{
   //Recieve the question specifications
   @Input() questionNumber = 1;
   @Input() question!: Question;
@@ -38,7 +38,6 @@ export class QuestionDisplayComponent {
   //When initializing, we timeout the reveal button since the boxes are not yet all initialized.
   ngOnInit() {
     this.totalAnswers = this.question.responses.length + 1;
-
     setTimeout(() => {
         this.readyToRevealDisabled = false;
       }, 5000

@@ -1,21 +1,25 @@
 [
     {
-        "question": "test",
+        "id": 1,
+        "type": "normal",
+        "question": "Lorem",
         "responses": [
-            {"points": "12", "response": "numero1"},
-            {"points": "6", "response": "numero2"},
-            {"points": "2", "response": "numero3"}
+            {"points": "12", "response": "Lorem"},
+            {"points": "6", "response": "Lorem"},
+            {"points": "2", "response": "Lorem"}
         ],
-        "specialResponse": {"points": "5", "response": "speciale"}
+        "specialResponse": {"points": "5", "response": "Lorem"}
     },
     {
-        "question": "test2",
+        "id": 2,
+        "type": "normal",
+        "question": "Ipsum",
         "responses": [
-            {"points": "12", "response": "numero1"},
-            {"points": "6", "response": "numero2"},
-            {"points": "2", "response": "numero3"},
-            {"points": "1", "response": "numero4"}
+            {"points": "12", "response": "Ipsum"},
+            {"points": "6", "response": "Ipsum"},
+            {"points": "2", "response": "Ipsum"},
+            {"points": "1", "response": "Ipsum"}
         ],
-        "specialResponse": {"points": "5", "response": "speciale"}
+        "specialResponse": {"points": "5", "response": "Ipsum"}
     }
 ]

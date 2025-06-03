@@ -1,0 +1,55 @@
+[
+    {
+        "id": 1,
+        "type": "normal",
+        "question": "Quel est le skill le plus important pour un programmeur?",
+        "responses": [
+            {"points": "10", "response": "Logique"},
+            {"points": "5", "response": "Patience"},
+            {"points": "5", "response": "Curiosité"},
+            {"points": "3", "response": "Créativité"},
+            {"points": "2", "response": "Improvisation"}
+        ],
+        "specialResponse": {"points": "5", "response": "Chat GPT"}
+    },
+    {
+        "id": 2,
+        "type": "normal",
+        "question": "Quel est la meilleur chose a propos d'être un programmeur?",
+        "responses": [
+          { "points": "7", "response": "Créativité" },
+          { "points": "6", "response": "Horaires Flexibles" },
+          { "points": "4", "response": "Bon Salaire" },
+          { "points": "2", "response": "Technologies" },
+          { "points": "2", "response": "Autonomie" }
+        ],
+        "specialResponse": { "points": "5", "response": "Concierge" }
+      },
+      {
+        "id": 3,
+        "type": "normal",
+        "question": "Qu'est-ce qui vous fait le plus peur en codant?",
+        "responses": [
+          { "points": "8", "response": "Mauvaise Syntaxe" },
+          { "points": "5", "response": "Bugs" },
+          { "points": "5", "response": "Crash" },
+          { "points": "3", "response": "Perte de Données" },
+          { "points": "2", "response": "Code 18" }
+        ],
+        "specialResponse": { "points": "5", "response": "James & Mathieu" }
+      },
+      {
+        "id": 4,
+        "type": "normal",
+        "question": "Nommer une chose que vous ne comprenez pas en informatique, peut-importe le nombre de fois que on vous le répète.",
+        "responses": [
+            { "points": "9", "response": "Les Pointeurs" },
+            { "points": "6", "response": "Gestion Mémoire" },
+            { "points": "4", "response": "L'assembleur" },
+            { "points": "3", "response": "Listes Chainées" },
+            { "points": "2", "response": "VM perd son IP" }
+        ],
+        "specialResponse": { "points": "5", "response": "James" }
+      }
+      
+]

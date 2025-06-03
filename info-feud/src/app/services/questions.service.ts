@@ -18,16 +18,22 @@ export class QuestionsService {
 
 
   retrieveQuestion(index: number){
-    console.log('-------------------');
     const question = this.questions[index-1];
-    console.log(':', question);   
     return question
   }
 
+  retrieveMaxPoints(index: number){
+    let count: number = 0;
+    this.questions[index-1].responses.map(
+      response => {
+        count += Number(response.points)
+      }
+    )
+    return count + 5
+  }
+
   retrieveSpecialResponse(index: number){
-    console.log('-------------------');
     const response = this.specialResponses[index-1];
-    console.log(':', response);   
     return response
   }
 
@@ -46,9 +52,13 @@ export class QuestionsService {
     }
 
     object.default.map( (question : any) => {
-      let questionJson = Question.fromJson(question);
-      this.questions.push(questionJson)
-      this.specialResponses.push(Response.fromJson(question.specialResponse))
+      if(question.type == 'normal'){
+        let questionJson = Question.fromJson(question);
+        this.questions.push(questionJson)
+        this.specialResponses.push(Response.fromJson(question.specialResponse))
+      }
     })
   }
+
+
 }
