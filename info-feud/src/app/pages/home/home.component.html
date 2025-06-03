@@ -1,6 +1,6 @@
 <!-- <img src="assets/images/dainty.jpg" alt="image test" /> -->
 <input type="text" placeholder="Rename team 1" (blur)="changeTeamName('team1', $event)">
 <input type="text" placeholder="Rename team 2" (blur)="changeTeamName('team2', $event)">
-<button-component button-text="GAME 1" [navigateTo]="'/game1-question1'"></button-component>
-<button-component button-text="GAME 2" [navigateTo]="'/game2-question1'"></button-component>
-<button-component button-text="DEMO" [navigateTo]="'/demo-question1'"></button-component>
+<button-component button-text="GAME 1" (buttonClick)="startGame('game1')"></button-component>
+<button-component button-text="GAME 2" (buttonClick)="startGame('game2')"></button-component>
+<button-component button-text="DEMO" (buttonClick)="startGame('demo')"></button-component>

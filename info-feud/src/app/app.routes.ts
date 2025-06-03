@@ -10,6 +10,7 @@ import { Question3Game2Component } from './pages/game2/question3/question3.compo
 import { Question4Game2Component } from './pages/game2/question4/question4.component';
 import { Question1DemoComponent } from './pages/demo/question1/question1.component';
 import { Question2DemoComponent } from './pages/demo/question2/question2.component';
+import { RegularQuestionComponent } from './pages/regular-question/regular-question.component';
 
 export const routes: Routes = [
     {
@@ -66,6 +67,11 @@ export const routes: Routes = [
         path: 'demo-question2',
         component: Question2DemoComponent,
         title: 'Question 2 (DEMO)',
+    },
+    {
+        path: 'question/:game/:id',
+        component: RegularQuestionComponent,
+        title: 'InfoFeud - REGULAR QUESTIONS'
     }
 
 ];
