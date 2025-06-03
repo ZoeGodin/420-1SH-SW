@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ButtonComponent } from '../../components/button-component/button-component.component';
 import { TeamService } from '../../services/team.service';
 import { QuestionsService } from '../../services/questions.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'home-page',

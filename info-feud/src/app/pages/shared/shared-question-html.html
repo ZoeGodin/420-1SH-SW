@@ -1,8 +1,10 @@
 <app-question-display
   *ngIf="isNormalQuestion"
+  [id]="nextId"
+  [isFlashNext]="isFlashNext"
   [question]="question"
   [specialResponse]="specialResponse"
   [maximumPoints]="maximumPoints"
   [questionNumber]="questionNumber"
-  [nextButtonRoute]="nextRoute"
+  [nextRoute]="nextRoute"
 ></app-question-display>
