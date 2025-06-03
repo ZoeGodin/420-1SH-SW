@@ -5,7 +5,8 @@
             {"points": "12", "response": "numero1"},
             {"points": "6", "response": "numero2"},
             {"points": "2", "response": "numero3"}
-        ]
+        ],
+        "specialResponse": {"points": "5", "response": "speciale"}
     },
     {
         "question": "test2",
@@ -14,6 +15,7 @@
             {"points": "6", "response": "numero2"},
             {"points": "2", "response": "numero3"},
             {"points": "1", "response": "numero4"}
-        ]
+        ],
+        "specialResponse": {"points": "5", "response": "speciale"}
     }
 ]

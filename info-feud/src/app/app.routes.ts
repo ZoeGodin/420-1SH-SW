@@ -8,6 +8,8 @@ import { Question1Game2Component } from './pages/game2/question1/question1.compo
 import { Question2Game2Component } from './pages/game2/question2/question2.component';
 import { Question3Game2Component } from './pages/game2/question3/question3.component';
 import { Question4Game2Component } from './pages/game2/question4/question4.component';
+import { Question1DemoComponent } from './pages/demo/question1/question1.component';
+import { Question2DemoComponent } from './pages/demo/question2/question2.component';
 
 export const routes: Routes = [
     {
@@ -55,5 +57,15 @@ export const routes: Routes = [
         component: Question4Game2Component,
         title: 'Question 4',
     },
+    {
+        path: 'demo-question1',
+        component: Question1DemoComponent,
+        title: 'Question 1 (DEMO)',
+    },
+    {
+        path: 'demo-question2',
+        component: Question2DemoComponent,
+        title: 'Question 2 (DEMO)',
+    }
 
 ];
