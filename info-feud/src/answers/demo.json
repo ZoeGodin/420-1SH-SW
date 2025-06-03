@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "type": "normal",
+        "question": "Lorem",
+        "responses": [
+            {"points": "12", "response": "Lorem"},
+            {"points": "6", "response": "Lorem"},
+            {"points": "2", "response": "Lorem"}
+        ],
+        "specialResponse": {"points": "5", "response": "Lorem"}
+    },
+    {
+        "id": 2,
+        "type": "normal",
+        "question": "Ipsum",
+        "responses": [
+            {"points": "12", "response": "Ipsum"},
+            {"points": "6", "response": "Ipsum"},
+            {"points": "2", "response": "Ipsum"},
+            {"points": "1", "response": "Ipsum"}
+        ],
+        "specialResponse": {"points": "5", "response": "Ipsum"}
+    }
+]

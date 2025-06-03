@@ -1,0 +1,55 @@
+[
+    {
+        "id": 1,
+        "type": "normal",
+        "question": "Nommer votre language de programamtion préféré",
+        "responses": [
+            {"points": "16", "response": "C++"},
+            {"points": "9", "response": "Javascript"},
+            {"points": "3", "response": "C#"},
+            {"points": "2", "response": "Ruby"},
+            {"points": "1", "response": "HTML"}
+        ],
+        "specialResponse": {"points": "5", "response": "Debian"}
+    },
+    {
+        "id": 2,
+        "type": "normal",
+        "question": "Quel est le pire type de job en informatique?",
+        "responses": [
+          { "points": "10", "response": "Soutien Technique" },
+          { "points": "8", "response": "Service Client" },
+          { "points": "3", "response": "Web Developper" },
+          { "points": "2", "response": "En présentiel" },
+          { "points": "1", "response": "Enseignant" }
+        ],
+        "specialResponse": { "points": "5", "response": "Concierge" }
+      },
+      {
+        "id": 3,
+        "type": "normal",
+        "question": "Quel est la pire chose à propos d'être un programmeur?",
+        "responses": [
+          { "points": "10", "response": "Debbuger" },
+          { "points": "8", "response": "Rester Assis" },
+          { "points": "3", "response": "Corriger Syntaxe" },
+          { "points": "2", "response": "Manque de Sommeil" },
+          { "points": "1", "response": "Job Hunting" }
+        ],
+        "specialResponse": { "points": "5", "response": "Rend fou" }
+      },
+      {
+        "id": 4,
+        "type": "normal",
+        "question": "À part 'Hello World', quel la premiere phrase que vous mettez dans vos codes?",
+        "responses": [
+            { "points": "9", "response": "Allo" },
+            { "points": "6", "response": "Bonjour" },
+            { "points": "4", "response": "Mon Nom" },
+            { "points": "2", "response": "Lorem Ipsum" },
+            { "points": "2", "response": "Test" }
+        ],
+        "specialResponse": { "points": "5", "response": "Chicken Toes" }
+      }
+      
+]
