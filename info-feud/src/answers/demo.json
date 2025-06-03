@@ -1,0 +1,19 @@
+[
+    {
+        "question": "test",
+        "responses": [
+            {"points": "12", "response": "numero1"},
+            {"points": "6", "response": "numero2"},
+            {"points": "2", "response": "numero3"}
+        ]
+    },
+    {
+        "question": "test2",
+        "responses": [
+            {"points": "12", "response": "numero1"},
+            {"points": "6", "response": "numero2"},
+            {"points": "2", "response": "numero3"},
+            {"points": "1", "response": "numero4"}
+        ]
+    }
+]

@@ -11,4 +11,15 @@ export class Question{
         this.question = value.question
         this.responses = value.responses
     }
+
+    static fromJson ( value: {
+        question: string,
+        responses: { points: string; response: string; }[]
+    }): Question {
+        const jsonResponses: Response[] = value.responses.map( response => Response.fromJson({response: response.response, points: response.points}))
+        return new Question({
+            question: value.question,
+            responses: jsonResponses
+        })
+    }
 }
