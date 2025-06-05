@@ -48,7 +48,6 @@ export class QuestionsService {
 
 
   async retrieveQuestionsFromJson(filename: string){
-    console.log('FROM JSON')
     this.resetQuestions()
 
     let object: any;

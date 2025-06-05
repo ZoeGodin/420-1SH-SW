@@ -52,7 +52,7 @@ export class RegularQuestionComponent implements OnInit{
     this.maximumPoints = this.questionService.retrieveMaxPoints(this.questionNumber);
   
     this.isEndNext = this.questionService.isEndNext(params.id)
-    if(!this.isEndNext){1/0
+    if(!this.isEndNext){
       this.isFlashNext = this.questionService.isFlashQuestionNext(params.id)
     }
     this.nextRoute = params.game;

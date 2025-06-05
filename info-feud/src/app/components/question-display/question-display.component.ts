@@ -76,7 +76,7 @@ export class QuestionDisplayComponent implements OnInit{
   //Go to the next question depending on the params
   nextQuestion(route: string, id: number, isFlashNext: boolean){
     if(isFlashNext){
-     this.router.navigateByUrl('/') 
+     this.router.navigateByUrl('/') //TO-DO: PUT URL OF FLASH QUESTION URL 
     }
     else{
       this.router.navigate(['/question', route, id])
