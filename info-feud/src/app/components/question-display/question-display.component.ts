@@ -25,6 +25,7 @@ export class QuestionDisplayComponent implements OnInit{
   @Input() nextRoute: string = '/';
   @Input() id: number = 0;
   @Input() isFlashNext: boolean = false;
+  @Input() isEndNext: boolean = false;
 
   //Get all the motion boxes components
   @ViewChildren(MotionBoxComponent) boxes!: QueryList<MotionBoxComponent>;
@@ -74,12 +75,16 @@ export class QuestionDisplayComponent implements OnInit{
   }
 
   //Go to the next question depending on the params
-  nextQuestion(route: string, id: number, isFlashNext: boolean){
-    if(isFlashNext){
-     this.router.navigateByUrl('/') //TO-DO: PUT URL OF FLASH QUESTION URL 
-    }
-    else{
-      this.router.navigate(['/question', route, id])
+  nextQuestion(route: string, id: number, isFlashNext: boolean, isEndNext: boolean){
+    if(isEndNext){
+      this.router.navigateByUrl('/'); //Will be changed if win/lose screen are added
+    }else{
+      if(isFlashNext){
+        this.router.navigate(['/flash-question', route]);
+      }
+      else{
+        this.router.navigate(['/question', route, id]);
+      }
     }
   }
 }

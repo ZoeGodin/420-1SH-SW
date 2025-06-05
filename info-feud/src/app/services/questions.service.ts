@@ -6,8 +6,10 @@ import { Response } from '../models/response.model';
   providedIn: 'root'
 })
 export class QuestionsService {
-  questions : Array<Question> = []
+  questions : Array<Question> = [];
   specialResponses : Array<Response> = [];
+
+  flashQuestions : Array<Question> = [];
 
   isEndNext(index: number){
     return !this.questions[index];
@@ -18,6 +20,28 @@ export class QuestionsService {
     return false
   }
 
+  // Returns 75% of the total points. This will be the number of points a team needs to win the flash round.
+  retrieveFlashPoints(){
+    let totalPoints: number = 0;
+    this.flashQuestions.forEach(question => {
+      question.responses.forEach(answer => {
+        totalPoints += Number(answer.points);
+      })
+    });
+    return Math.round(totalPoints * 0.75);
+  }
+
+  retrieveFlashQuestionAnswerPoints(index: number, playerAnswer: string){
+    let answers = this.flashQuestions[index].responses
+    let points: string = '0';
+    answers.forEach(answer => {
+      if(answer.response.toLowerCase() === playerAnswer.toLowerCase()){
+        points = answer.points;
+        return;
+      }
+    });
+    return points;
+  }
 
   resetQuestions(){
     this.questions = [];
@@ -61,10 +85,12 @@ export class QuestionsService {
     }
 
     object.default.map( (question : any) => {
-      if(question.type == 'normal'){
-        let questionJson = Question.fromJson(question);
-        this.questions.push(questionJson)
-        this.specialResponses.push(Response.fromJson(question.specialResponse))
+      let questionJson = Question.fromJson(question);
+      this.questions.push(questionJson)
+      this.specialResponses.push(Response.fromJson(question.specialResponse))
+
+      if(questionJson.type == 'flash'){
+        this.flashQuestions.push(questionJson)
       }
     })
   }
