@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { MotionBoxComponent } from '../motion-box/motion-box.component';
 import { ButtonComponent } from '../button-component/button-component.component';
 import { CounterComponent } from '../counter/counter.component';
-import { Response } from '../../models/response.model';
 import { Question } from '../../models/question.model';
 import { TeamService } from '../../services/team.service';
+import { Response } from '../../models/response.model';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 
