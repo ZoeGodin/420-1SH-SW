@@ -9,7 +9,15 @@ export class QuestionsService {
   questions : Array<Question> = []
   specialResponses : Array<Response> = [];
 
-  calculateMaxuimumPoints(){}
+  isEndNext(index: number){
+    return !this.questions[index];
+  }
+
+  isFlashQuestionNext(index: number){
+    if(this.questions[index].type == 'flash') return true
+    return false
+  }
+
 
   resetQuestions(){
     this.questions = [];
@@ -17,7 +25,7 @@ export class QuestionsService {
   }
 
 
-  retrieveQuestion(index: number){
+  async retrieveQuestion(index: number){
     const question = this.questions[index-1];
     return question
   }
@@ -26,13 +34,14 @@ export class QuestionsService {
     let count: number = 0;
     this.questions[index-1].responses.map(
       response => {
+        console.log(response)
         count += Number(response.points)
       }
     )
-    return count + 5
+    return count + Number(this.specialResponses[index-1].points)
   }
 
-  retrieveSpecialResponse(index: number){
+  async retrieveSpecialResponse(index: number){
     const response = this.specialResponses[index-1];
     return response
   }

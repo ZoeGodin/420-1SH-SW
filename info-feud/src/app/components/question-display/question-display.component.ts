@@ -7,6 +7,7 @@ import { Response } from '../../models/response.model';
 import { Question } from '../../models/question.model';
 import { TeamService } from '../../services/team.service';
 import { MatButtonModule } from '@angular/material/button';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-question-display',
@@ -21,11 +22,14 @@ export class QuestionDisplayComponent implements OnInit{
   @Input() question!: Question;
   @Input() specialResponse!: Response;
   @Input() maximumPoints = 0;
-  @Input() nextButtonRoute: string = '/';
+  @Input() nextRoute: string = '/';
+  @Input() id: number = 0;
+  @Input() isFlashNext: boolean = false;
 
   //Get all the motion boxes components
   @ViewChildren(MotionBoxComponent) boxes!: QueryList<MotionBoxComponent>;
 
+  router: Router = new Router
   readyToRevealDisabled = true;
   revealedCount = 0;
   totalAnswers = 0;
@@ -67,5 +71,15 @@ export class QuestionDisplayComponent implements OnInit{
   forceRevealAll() {
     this.boxes.forEach(box => box.forceRevealWithoutEmit());
     this.revealedCount = this.totalAnswers;
+  }
+
+  //Go to the next question depending on the params
+  nextQuestion(route: string, id: number, isFlashNext: boolean){
+    if(isFlashNext){
+     this.router.navigateByUrl('/') //TO-DO: PUT URL OF FLASH QUESTION URL 
+    }
+    else{
+      this.router.navigate(['/question', route, id])
+    }
   }
 }

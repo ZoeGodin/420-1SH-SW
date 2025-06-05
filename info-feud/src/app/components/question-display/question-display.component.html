@@ -22,7 +22,7 @@
   </app-motion-box>
 
   <ng-container *ngIf="revealedCount >= totalAnswers; else revealAllBtn">
-    <button-component button-text="CONTINUER" [navigateTo]="nextButtonRoute"></button-component>
+    <button-component button-text="CONTINUER" (buttonClick)="nextQuestion(nextRoute, id, isFlashNext)"></button-component>
   </ng-container>
 
   <ng-template #revealAllBtn>
