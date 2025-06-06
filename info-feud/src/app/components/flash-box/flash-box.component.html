@@ -1,0 +1,28 @@
+ <div class="flashRow">
+    <div #boxLeftContainer class="feud-row">
+        <div class="feud-points">
+            <span *ngIf="!isLeftRevealed" class="static">{{ pointsPlaceholder }}</span>
+            <span *ngIf="isLeftRevealed" #pointsLeftText>{{ leftPoints }}</span>
+        </div>
+        <div class="feud-answer" *ngIf="!isLeftRevealed">
+            <input type="text" #answerLeftText class="spanAnswer"/>
+            <button (click)="revealAnswer('left')"></button>
+        </div>
+        <div class="feud-answer" *ngIf="isLeftRevealed">
+            <span #answerLeftSpan>{{leftAnswer}}</span>
+        </div>
+    </div>
+    <div #boxRightContainer class="feud-row">
+        <div class="feud-answer" *ngIf="!isRightRevealed">
+            <button (click)="revealAnswer('right')"></button>
+            <input type="text" #answerRightText class="spanAnswer"/>
+        </div>
+        <div class="feud-answer" *ngIf="isRightRevealed">
+            <span #answerRightSpan>{{rightAnswer}}</span>
+        </div>
+        <div class="feud-points">
+            <span *ngIf="!isRightRevealed" class="static">{{ pointsPlaceholder }}</span>
+            <span *ngIf="isRightRevealed" #pointsRightText>{{ rightPoints }}</span>
+        </div>
+    </div>
+ </div>

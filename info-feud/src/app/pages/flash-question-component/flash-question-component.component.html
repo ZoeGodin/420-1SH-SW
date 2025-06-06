@@ -1,0 +1,19 @@
+<!-- <div class="questionContainer" *ngIf="question"> -->
+    <p id="questionText">QUESTION FLASH</p>
+    <!-- <app-counter [points]="12"></app-counter> -->
+<!-- 
+    <ng-container *ngFor="let response of question.responses; index as i">
+        <app-motion-box 
+        [answer]="response.response"
+        [points]="response.points"
+        [delayIndex]="i"
+        (revealed)="onBoxRevealed($event)">
+        </app-motion-box>
+    </ng-container> -->
+<!-- 
+    <ng-container *ngIf="revealedCount >= totalAnswers; else revealAllBtn">
+        <button-component button-text="CONTINUER" (buttonClick)="nextQuestion(nextRoute, id, isFlashNext, isEndNext)"></button-component>
+    </ng-container> -->
+
+<!-- </div> -->
+<app-flash-box></app-flash-box>

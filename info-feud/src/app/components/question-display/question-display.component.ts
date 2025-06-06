@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { MotionBoxComponent } from '../motion-box/motion-box.component';
 import { ButtonComponent } from '../button-component/button-component.component';
 import { CounterComponent } from '../counter/counter.component';
-import { Response } from '../../models/response.model';
 import { Question } from '../../models/question.model';
 import { TeamService } from '../../services/team.service';
+import { Response } from '../../models/response.model';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 
@@ -25,6 +25,7 @@ export class QuestionDisplayComponent implements OnInit{
   @Input() nextRoute: string = '/';
   @Input() id: number = 0;
   @Input() isFlashNext: boolean = false;
+  @Input() isEndNext: boolean = false;
 
   //Get all the motion boxes components
   @ViewChildren(MotionBoxComponent) boxes!: QueryList<MotionBoxComponent>;
@@ -74,12 +75,16 @@ export class QuestionDisplayComponent implements OnInit{
   }
 
   //Go to the next question depending on the params
-  nextQuestion(route: string, id: number, isFlashNext: boolean){
-    if(isFlashNext){
-     this.router.navigateByUrl('/') //TO-DO: PUT URL OF FLASH QUESTION URL 
-    }
-    else{
-      this.router.navigate(['/question', route, id])
+  nextQuestion(route: string, id: number, isFlashNext: boolean, isEndNext: boolean){
+    if(isEndNext){
+      this.router.navigateByUrl('/'); //Will be changed if win/lose screen are added
+    }else{
+      if(isFlashNext){
+        this.router.navigate(['/flash-question', route]);
+      }
+      else{
+        this.router.navigate(['/question', route, id]);
+      }
     }
   }
 }

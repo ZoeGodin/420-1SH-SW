@@ -12,27 +12,15 @@
     },
     {
         "id": 2,
-        "type": "normal",
-        "question": "Ipsum",
-        "responses": [
-            {"points": "12", "response": "Ipsum"},
-            {"points": "6", "response": "Ipsum"},
-            {"points": "2", "response": "Ipsum"},
-            {"points": "1", "response": "Ipsum"}
-        ],
-        "specialResponse": {"points": "5", "response": "Ipsum"}
-    },
-    {
-        "id": 3,
         "type": "flash",
         "question": "Lorem Ipsum",
         "responses": [
-            {"points": "99", "response": "Lorem Ipsum"},
-            {"points": "99", "response": "Lorem Ipsum"},
-            {"points": "99", "response": "Lorem Ipsum"},
-            {"points": "99", "response": "Lorem Ipsum"},
-            {"points": "99", "response": "Lorem Ipsum"}
+            {"points": "99", "response": "A"},
+            {"points": "70", "response": "B"},
+            {"points": "50", "response": "C"},
+            {"points": "30", "response": "D"},
+            {"points": "10", "response": "E"}
         ],
-        "specialResponse": {"points": "99", "response": "Lorem Ipsum"}
+        "specialResponse": {}
     }
 ]
