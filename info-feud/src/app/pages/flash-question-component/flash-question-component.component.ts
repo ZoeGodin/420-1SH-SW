@@ -1,4 +1,4 @@
-import { Component, Input, ViewChildren, QueryList, OnInit, ElementRef, ViewChild, EventEmitter, Output, HostListener, viewChild } from '@angular/core';
+import { Component, Output} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../../components/button-component/button-component.component';
 import { CounterComponent } from '../../components/counter/counter.component';
@@ -22,7 +22,7 @@ export class FlashQuestionComponentComponent {
   pointsWon: number = 0;
   revealedCount = 0;
   totalAnswers: number = 0;
-
+  rounds: number = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -45,6 +45,10 @@ export class FlashQuestionComponentComponent {
   onBoxRevealed(points: number) {
     this.revealedCount++;
     this.pointsWon += points;
+  }
+
+  counterFinished(){
+    this.rounds++;
   }
 
   seeResults(){

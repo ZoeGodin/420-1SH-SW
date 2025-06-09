@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild, ElementRef, NgZone } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef, NgZone, Output, EventEmitter } from '@angular/core';
 import { animate, easeOut } from 'motion';
 import { NgIf } from '@angular/common';
 import { ButtonComponent } from '../button-component/button-component.component';
@@ -12,6 +12,8 @@ import { ButtonComponent } from '../button-component/button-component.component'
 export class TimerComponent {
   //Receive the time in seconds that will be used for the timer
   @Input() time: number = 0;
+
+  @Output() ended = new EventEmitter<void>();
 
   isCounting: boolean = false;
 
@@ -48,7 +50,7 @@ export class TimerComponent {
             this.playEndAudio();
 
             el.textContent = 'DONE';
-            
+            this.ended.emit();
             this.ngZone.run(() => {
               setTimeout(() => {
                 this.isCounting = false;

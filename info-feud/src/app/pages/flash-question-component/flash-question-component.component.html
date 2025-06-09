@@ -1,7 +1,9 @@
 <div class="questionContainer" *ngIf="questions && pointsToWin != 0">
     <div>
         <p id="questionText">✨ QUESTION FLASH ✨</p>
-        <app-timer [time]="60"></app-timer>
+        <div *ngIf="rounds < 2">
+            <app-timer [time]="60" (ended)="counterFinished()"></app-timer>
+        </div>
     </div>
     <div id="test">
         <div class="pointDiv">
