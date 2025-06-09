@@ -1,0 +1,8 @@
+<div id="pointPreview" *ngIf="time != 0">
+    <div *ngIf="isCounting">
+        <pre id="timer" #timerRef class="pointText">0</pre>
+    </div>
+    <div *ngIf="!isCounting">
+        <button-component (buttonClick)="countDown()" button-text="DÉMARRER ROUND"></button-component>
+    </div>
+</div>

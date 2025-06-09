@@ -1,6 +1,9 @@
 <div class="questionContainer" *ngIf="question">
   <p id="questionText">QUESTION {{ questionNumber }}</p>
-  <app-counter [points]="maximumPoints"></app-counter>
+  <div id="counterDiv">
+    <p class="pointText">Points gagnables pour cette question:</p>
+    <app-counter [points]="maximumPoints"></app-counter>
+  </div>
   <p class="questionP">{{ question.question }}</p>
 
   <ng-container *ngFor="let response of question.responses; index as i">

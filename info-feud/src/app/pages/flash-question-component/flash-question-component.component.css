@@ -1,0 +1,57 @@
+.questionContainer {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pointText {
+    font-size: 3rem;
+    font-weight: bold;
+    color: gold; 
+    margin: 0.5rem 0;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.pointWonText {
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(20, 10, 170); 
+    margin: 0.5rem 0;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#counterDiv {
+  display: flex;
+}
+
+.pointDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 30px;
+}
+
+#questionText {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 20px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#test {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#resultButton {
+    margin-top: 5rem;
+}

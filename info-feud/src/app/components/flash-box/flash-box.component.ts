@@ -146,6 +146,8 @@ export class FlashBoxComponent {
         delay: 0.1
       });
     });
+
+    this.playRevealAudio();
   }
 
   validatePoints(side: string){
@@ -154,6 +156,13 @@ export class FlashBoxComponent {
     }if (side == 'right') {
       this.rightPoints = this.questionService.retrieveFlashQuestionAnswerPoints(this.flashQuestionId, this.rightAnswer)
     }
+  }
+
+  playRevealAudio(){
+    let audio = new Audio;
+    audio.src = "assets/flashAnswerReveal.wav";
+    audio.load();
+    audio.play();
   }
 
 }
