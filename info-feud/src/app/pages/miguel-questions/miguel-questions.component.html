@@ -1,0 +1,28 @@
+<div class="questionContainer" *ngIf="question">
+  <p id="questionText">QUESTION {{ questionNumber }}</p>
+  <div id="counterDiv">
+    <p class="pointText">Points que Miguel peut gagner:</p>
+    <app-counter [points]="maximumPoints"></app-counter>
+  </div>
+  <p class="questionP">{{ question.question }}</p>
+
+  <ng-container *ngFor="let response of question.responses; index as i">
+    <app-motion-box 
+      [answer]="response.response"
+      [points]="response.points"
+      [delayIndex]="i">
+    </app-motion-box>
+  </ng-container>
+
+  <ng-container *ngIf="revealedCount >= totalAnswers; else revealAllBtn">
+    <button-component button-text="CONTINUER" (buttonClick)="nextQuestion()"></button-component>
+  </ng-container>
+
+  <ng-template #revealAllBtn>
+    <button mat-button class="pointButtons" 
+      (click)="forceRevealAll()" 
+      [disabled]="readyToRevealDisabled"
+      >VOIR LES RÉPONSES
+    </button>
+  </ng-template>
+</div>

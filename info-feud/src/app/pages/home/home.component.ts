@@ -21,6 +21,10 @@ export class HomeComponent {
   }
 
   startGame(game: string){
-    this.router.navigate(['/question', game, 1])
+    if(game === 'migame'){
+      this.router.navigate(['/migame', game, 1])
+    }else{
+      this.router.navigate(['/question', game, 1])
+    }
   }
 }

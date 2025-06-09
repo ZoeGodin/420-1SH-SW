@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "type": "normal",
+        "question": "Dans quel pays est situé Dubai?",
+        "responses": [
+            {"points": "100", "response": "Emirat Arab Unis"}
+        ]
+    },
+    {
+        "id": 2,
+        "type": "normal",
+        "question": "Est-ce que les femmes ont un ou deux placenta?",
+        "responses": [
+          { "points": "100", "response": "1" }
+        ]
+      },
+      {
+        "id": 3,
+        "type": "normal",
+        "question": "Qui est la QUEEN?",
+        "responses": [
+          { "points": "100", "response": "Olivia Rodrigo" }
+        ]
+      },
+      {
+        "id": 4,
+        "type": "normal",
+        "question": "De quelle couleur est le cheval blanc de Napoléon?",
+        "responses": [
+            { "points": "100", "response": "Blanc" }
+        ]
+      },
+      {
+        "id": 5,
+        "type": "normal",
+        "question": "À combien de mains on utilise un clavier?",
+        "responses": [
+            { "points": "100", "response": "2 mains" }
+        ]
+      },
+      {
+        "id": 6,
+        "type": "normal",
+        "question": "Où est-ce que Billie Eilish est née?",
+        "responses": [
+            { "points": "100", "response": "L.A" }
+        ]
+      },
+      {
+        "id": 7,
+        "type": "normal",
+        "question": "Quels partie du corps non commune permet a certaines tortues de respirer?",
+        "responses": [
+            { "points": "100", "response": "Les foufounes" }
+        ]
+      },
+      {
+        "id": 8,
+        "type": "normal",
+        "question": "Qu'est-ce qui est le plus lourd, 1 kilo de plume ou 1 kilo de plomb?",
+        "responses": [
+            { "points": "100", "response": "Bro, c'est 1 kilo" }
+        ]
+      }
+]

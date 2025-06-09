@@ -65,7 +65,10 @@ export class QuestionsService {
         count += Number(response.points)
       }
     )
-    return count + Number(this.specialResponses[index-1].points)
+    if(this.specialResponses.length != 0){
+      count += Number(this.specialResponses[index-1].points)
+    }
+    return count
   }
 
   async retrieveSpecialResponse(index: number){
@@ -90,7 +93,9 @@ export class QuestionsService {
     object.default.map( (question : any) => {
       let questionJson = Question.fromJson(question);
       this.questions.push(questionJson)
-      this.specialResponses.push(Response.fromJson(question.specialResponse))
+      if(question.specialResponse){
+        this.specialResponses.push(Response.fromJson(question.specialResponse))
+      }
 
       if(questionJson.type == 'flash'){
         this.flashQuestions.push(questionJson)
