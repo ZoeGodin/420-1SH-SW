@@ -54,6 +54,10 @@ export class QuestionsService {
     return question
   }
 
+  async retrieveFlashQuestions(){
+    return this.flashQuestions
+  }
+
   retrieveMaxPoints(index: number){
     let count: number = 0;
     this.questions[index-1].responses.map(

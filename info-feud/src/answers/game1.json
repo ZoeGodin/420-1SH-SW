@@ -50,6 +50,71 @@
             { "points": "2", "response": "Test" }
         ],
         "specialResponse": { "points": "5", "response": "Chicken Toes" }
+      },
+    {
+        "id": 5,
+        "type": "flash",
+        "question": "Quel langage de programation est le plus dur à apprendre?",
+        "responses": [
+            {"points": "15", "response": "Assembleur"},
+            {"points": "7", "response": "Javascript"},
+            {"points": "7", "response": "C++"},
+            {"points": "2", "response": "Ruby"},
+            {"points": "1", "response": "CSS"}
+        ],
+        "specialResponse": {}
+    },
+    {
+        "id": 6,
+        "type": "flash",
+        "question": "Si vous pouviez maitriser un langage de programation instantanement, lequel choisiriez-vous?",
+        "responses": [
+            {"points": "11", "response": "C++"},
+            {"points": "7", "response": "Assembleur"},
+            {"points": "6", "response": "Python"},
+            {"points": "2", "response": "Rust"},
+            {"points": "1", "response": "Fortran"}
+        ],
+        "specialResponse": {}
+      },
+    {
+        "id": 7,
+        "type": "flash",
+        "question": "Quel est le meilleur ami d'un programmeur?",
+        "responses": [
+            {"points": "8", "response": "IA"},
+            {"points": "7", "response": "Documentation"},
+            {"points": "5", "response": "Debugger"},
+            {"points": "3", "response": "Café"},
+            {"points": "1", "response": "Canard"}
+        ],
+        "specialResponse": {}
+      },
+    {
+        "id": 8,
+        "type": "flash",
+        "question": "Quel est l'heure moyenne que James mange sa banane?",
+        "responses": [
+            {"points": "11", "response": "JSP"},
+            {"points": "6", "response": "10h"},
+            {"points": "5", "response": "11h"},
+            {"points": "3", "response": "8h"},
+            {"points": "1", "response": "14h"}
+        ],
+        "specialResponse": {}
+      },
+    {
+        "id": 9,
+        "type": "flash",
+        "question": "Quel langage de programation est le plus facile a apprendre?",
+        "responses": [
+            {"points": "9", "response": "C++"},
+            {"points": "5", "response": "Ruby"},
+            {"points": "5", "response": "Python"},
+            {"points": "4", "response": "HTML"},
+            {"points": "3", "response": "Javascript"}
+        ],
+        "specialResponse": {}
       }
       
 ]

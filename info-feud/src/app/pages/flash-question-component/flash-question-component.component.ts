@@ -4,9 +4,10 @@ import { ButtonComponent } from '../../components/button-component/button-compon
 import { CounterComponent } from '../../components/counter/counter.component';
 import { Question } from '../../models/question.model';
 import { TeamService } from '../../services/team.service';
+import { QuestionsService } from '../../services/questions.service';
 import { Response } from '../../models/response.model';
 import { MatButtonModule } from '@angular/material/button';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { animate, easeOut } from 'motion';
 import { FlashBoxComponent } from '../../components/flash-box/flash-box.component';
 
@@ -17,5 +18,26 @@ import { FlashBoxComponent } from '../../components/flash-box/flash-box.componen
   styleUrl: './flash-question-component.component.css'
 })
 export class FlashQuestionComponentComponent {
+  router: Router = new Router;
+  questions: Array<Question> = [];
+
+  constructor(
+    private route: ActivatedRoute,
+    public teamService: TeamService,
+    public questionService: QuestionsService
+  ){}
+
+    ngOnInit() {
+    this.route.params.subscribe(async params => {
+      await this.assigningQuestions(params);
+    })
+  }
+
+  async assigningQuestions(params: any){
+    this.questions = await this.questionService.retrieveFlashQuestions();
+    console.log('-----------------------------')
+    console.log(this.questions);
+  }
+
 
 }

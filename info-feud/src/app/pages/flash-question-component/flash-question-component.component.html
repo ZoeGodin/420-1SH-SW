@@ -16,4 +16,9 @@
     </ng-container> -->
 
 <!-- </div> -->
-<app-flash-box></app-flash-box>
+<ng-container *ngFor="let flashQuestion of questions; index as i">
+    <app-flash-box
+    [flashQuestionId]="i"
+    [delayIndex]="i"
+    ></app-flash-box>
+</ng-container>

@@ -50,6 +50,69 @@
             { "points": "2", "response": "VM perd son IP" }
         ],
         "specialResponse": { "points": "5", "response": "James" }
+      },
+    {
+        "id": 5,
+        "type": "flash",
+        "question": "Quel est votre langage de programation que vous detester le plus?",
+        "responses": [
+            {"points": "15", "response": "Assembleur"},
+            {"points": "7", "response": "Javascript"},
+            {"points": "5", "response": "Ruby"},
+            {"points": "2", "response": "CSS"},
+            {"points": "1", "response": "PHP"}
+        ],
+        "specialResponse": {}
+    },
+    {
+        "id": 6,
+        "type": "flash",
+        "question": "Quel est le jeu le plus joué sur l'arcade?",
+        "responses": [
+            {"points": "25", "response": "Tetris"},
+            {"points": "3", "response": "Street Fighter"},
+            {"points": "2", "response": "Mortal Combat"}
+        ],
+        "specialResponse": {}
+      },
+    {
+        "id": 7,
+        "type": "flash",
+        "question": "Quel est la mascotte du departement?",
+        "responses": [
+            {"points": "8", "response": "James"},
+            {"points": "7", "response": "MC"},
+            {"points": "6", "response": "Canards"},
+            {"points": "2", "response": "Robot"},
+            {"points": "2", "response": "Tete engrenage"},
+            {"points": "1", "response": "Mathieu"},
+            {"points": "1", "response": "Ariane"}
+        ],
+        "specialResponse": {}
+      },
+    {
+        "id": 8,
+        "type": "flash",
+        "question": "Quel browser utilisez-vous?",
+        "responses": [
+            {"points": "19", "response": "Google"},
+            {"points": "7", "response": "Firefox"},
+            {"points": "5", "response": "Edge"},
+            {"points": "3", "response": "Brave"},
+            {"points": "2", "response": "OperaGX"}
+        ],
+        "specialResponse": {}
+      },
+    {
+        "id": 9,
+        "type": "flash",
+        "question": "Quel est le meilleur éditeur de code?",
+        "responses": [
+            {"points": "30", "response": "VS code"},
+            {"points": "3", "response": "Notepad"},
+            {"points": "2", "response": "Vim"},
+            {"points": "1", "response": "xcode"}
+        ],
+        "specialResponse": {}
       }
-      
 ]
