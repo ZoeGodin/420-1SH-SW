@@ -89,7 +89,15 @@ export class MotionBoxComponent {
         ease: 'easeOut',
         delay: 0.1
       });
+      this.playRevealAudio();
     });
+  }
+
+  playRevealAudio(){
+    let audio = new Audio;
+    audio.src = "assets/answerReveal.wav";
+    audio.load();
+    audio.play();
   }
 
 }

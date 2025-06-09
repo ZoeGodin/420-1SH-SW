@@ -33,22 +33,30 @@
   display: flex;
 }
 
-#pointDiv {
+.pointDiv {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    border-color: blue;
+    border-width: 1px;
+    border-style: solid;
+    margin: 30px;
 }
 
 #questionText {
     font-size: 4rem;
     font-weight: bold;
-    margin: 0.5rem 0;
+    margin: 20px;
     font-family:'Courier New', Courier, monospace;
 }
 
 #test {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 #resultButton {

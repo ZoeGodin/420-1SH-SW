@@ -38,7 +38,6 @@ export class FlashQuestionComponentComponent {
 
   async assigningQuestions(params: any){
     this.pointsToWin = await this.questionService.retrieveFlashPoints();
-    console.log(this.pointsToWin);
     this.questions = await this.questionService.retrieveFlashQuestions();
     this.totalAnswers = (this.questions.length) * 2;
   }

@@ -1,17 +1,18 @@
 <div class="questionContainer" *ngIf="questions && pointsToWin != 0">
+    <div>
+        <p id="questionText">✨ QUESTION FLASH ✨</p>
+        <app-timer [time]="60"></app-timer>
+    </div>
     <div id="test">
-        <p id="questionText">QUESTION FLASH</p>
-        <app-timer></app-timer>
-
-        <div id="pointDiv">
+        <div class="pointDiv">
             <p class="pointText" >Points pour gagner: </p>
             <app-counter class="pointText" [points]="pointsToWin"></app-counter>
         </div>
-
-        <p class="pointWonText">{{ pointsWon }}</p>
+        <div class="pointDiv">
+            <p class="pointWonText">Points gagnés: </p>
+            <p class="pointWonText">{{ pointsWon }}</p>
+        </div>
     </div>
-
-
     <ng-container *ngFor="let flashQuestion of questions; index as i">
         <app-flash-box
         [flashQuestionId]="i"
