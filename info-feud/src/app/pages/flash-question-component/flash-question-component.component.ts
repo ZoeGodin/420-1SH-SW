@@ -5,21 +5,24 @@ import { CounterComponent } from '../../components/counter/counter.component';
 import { Question } from '../../models/question.model';
 import { TeamService } from '../../services/team.service';
 import { QuestionsService } from '../../services/questions.service';
-import { Response } from '../../models/response.model';
-import { MatButtonModule } from '@angular/material/button';
 import { ActivatedRoute, Router } from '@angular/router';
-import { animate, easeOut } from 'motion';
 import { FlashBoxComponent } from '../../components/flash-box/flash-box.component';
+import { TimerComponent } from '../../components/timer/timer.component';
 
 @Component({
   selector: 'app-flash-question-component',
-  imports: [CommonModule, FlashBoxComponent],
+  imports: [CommonModule, FlashBoxComponent, ButtonComponent, CounterComponent, TimerComponent],
   templateUrl: './flash-question-component.component.html',
   styleUrl: './flash-question-component.component.css'
 })
 export class FlashQuestionComponentComponent {
   router: Router = new Router;
   questions: Array<Question> = [];
+  pointsToWin: number = 0;
+  pointsWon: number = 0;
+  revealedCount = 0;
+  totalAnswers: number = 0;
+
 
   constructor(
     private route: ActivatedRoute,
@@ -34,10 +37,23 @@ export class FlashQuestionComponentComponent {
   }
 
   async assigningQuestions(params: any){
+    this.pointsToWin = await this.questionService.retrieveFlashPoints();
+    console.log(this.pointsToWin);
     this.questions = await this.questionService.retrieveFlashQuestions();
-    console.log('-----------------------------')
-    console.log(this.questions);
+    this.totalAnswers = (this.questions.length) * 2;
   }
 
+  onBoxRevealed(points: number) {
+    this.revealedCount++;
+    this.pointsWon += points;
+  }
 
+  seeResults(){
+    console.log('see results')
+    if(this.pointsWon < this.pointsToWin){
+      //go to lose screen
+    }else{
+      //go to winning screen
+    }
+  }
 }

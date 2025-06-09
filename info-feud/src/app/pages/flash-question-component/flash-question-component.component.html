@@ -1,24 +1,26 @@
-<!-- <div class="questionContainer" *ngIf="question"> -->
-    <p id="questionText">QUESTION FLASH</p>
-    <!-- <app-counter [points]="12"></app-counter> -->
-<!-- 
-    <ng-container *ngFor="let response of question.responses; index as i">
-        <app-motion-box 
-        [answer]="response.response"
-        [points]="response.points"
-        [delayIndex]="i"
-        (revealed)="onBoxRevealed($event)">
-        </app-motion-box>
-    </ng-container> -->
-<!-- 
-    <ng-container *ngIf="revealedCount >= totalAnswers; else revealAllBtn">
-        <button-component button-text="CONTINUER" (buttonClick)="nextQuestion(nextRoute, id, isFlashNext, isEndNext)"></button-component>
-    </ng-container> -->
+<div class="questionContainer" *ngIf="questions && pointsToWin != 0">
+    <div id="test">
+        <p id="questionText">QUESTION FLASH</p>
+        <app-timer></app-timer>
 
-<!-- </div> -->
-<ng-container *ngFor="let flashQuestion of questions; index as i">
-    <app-flash-box
-    [flashQuestionId]="i"
-    [delayIndex]="i"
-    ></app-flash-box>
-</ng-container>
+        <div id="pointDiv">
+            <p class="pointText" >Points pour gagner: </p>
+            <app-counter class="pointText" [points]="pointsToWin"></app-counter>
+        </div>
+
+        <p class="pointWonText">{{ pointsWon }}</p>
+    </div>
+
+
+    <ng-container *ngFor="let flashQuestion of questions; index as i">
+        <app-flash-box
+        [flashQuestionId]="i"
+        [delayIndex]="i"
+        (revealed)="onBoxRevealed($event)"
+        ></app-flash-box>
+    </ng-container> 
+
+    <ng-container *ngIf="revealedCount >= totalAnswers;">
+        <button-component button-text="RESULTATS" (buttonClick)="seeResults()" id="resultButton"></button-component>
+    </ng-container>  
+</div>

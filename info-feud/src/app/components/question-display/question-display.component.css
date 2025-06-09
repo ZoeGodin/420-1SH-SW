@@ -74,3 +74,15 @@
     width: 125px;
     background-color: #ffd700;
 }
+
+.pointText {
+    font-size: 3rem;
+    font-weight: bold;
+    color: gold; 
+    margin: 0.5rem 0;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#counterDiv {
+  display: flex;
+}

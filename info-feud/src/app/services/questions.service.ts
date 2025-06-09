@@ -20,15 +20,15 @@ export class QuestionsService {
     return false
   }
 
-  // Returns 75% of the total points. This will be the number of points a team needs to win the flash round.
-  retrieveFlashPoints(){
+  // Returns 60% of the total points. This will be the number of points a team needs to win the flash round.
+  async retrieveFlashPoints(){
     let totalPoints: number = 0;
     this.flashQuestions.forEach(question => {
       question.responses.forEach(answer => {
         totalPoints += Number(answer.points);
       })
     });
-    return Math.round(totalPoints * 0.75);
+    return Math.round(totalPoints * 0.6);
   }
 
   retrieveFlashQuestionAnswerPoints(index: number, playerAnswer: string){
@@ -62,7 +62,6 @@ export class QuestionsService {
     let count: number = 0;
     this.questions[index-1].responses.map(
       response => {
-        console.log(response)
         count += Number(response.points)
       }
     )
