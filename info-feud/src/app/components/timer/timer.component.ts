@@ -25,41 +25,53 @@ export class TimerComponent {
   constructor(private ngZone: NgZone) {}
 
   countDown(){
+    if (this.isCounting) return;
+
     this.isCounting = true;
-
-    setTimeout(() => {
-      const el = this.countEl;
-      if (!el) {
-        console.warn('Timer element not available');
-        this.isCounting = false;
-        return;
-      }
-  
-      let counter = { value: this.time };
-  
-      animate(
-        counter,
-        { value: 0 },
-        {
-          duration: this.time,
-          ease: easeOut,
-          onUpdate: () => {
-            el.textContent = Math.round(counter.value).toString();
-          },
-          onComplete: () => {
-            this.playEndAudio();
-
-            el.textContent = 'DONE';
-            this.ended.emit();
-            this.ngZone.run(() => {
-              setTimeout(() => {
-                this.isCounting = false;
-              }, 5000);
-            });
-          },
+    this.ngZone.runOutsideAngular(() => {
+      setTimeout(() => {
+        const el = this.countEl;
+        if (!el) {
+          console.warn('Timer element not available');
+          this.isCounting = false;
+          return;
         }
-      );
-    }, 0);
+
+        this.playStartAudio();
+
+        let counter = { value: this.time };
+    
+        animate(
+          counter,
+          { value: 0 },
+          {
+            duration: this.time,
+            ease: easeOut,
+            onUpdate: () => {
+              el.textContent = Math.round(counter.value).toString();
+            },
+            onComplete: () => {
+              this.playEndAudio();
+
+              el.textContent = 'DONE';
+              this.ended.emit();
+              this.ngZone.run(() => {
+                setTimeout(() => {
+                  this.isCounting = false;
+                }, 5000);
+              });
+            },
+          }
+        );
+      }, 0);
+    });
+  }
+
+  playStartAudio(){
+    let audio = new Audio;
+    audio.src = "assets/timerStart.wav";
+    audio.load();
+    audio.play();
   }
 
   playEndAudio(){

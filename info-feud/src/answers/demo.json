@@ -22,5 +22,18 @@
             {"points": "10", "response": "E"}
         ],
         "specialResponse": {}
+    },
+    {
+        "id": 3,
+        "type": "flash",
+        "question": "Lorem Ipsum",
+        "responses": [
+            {"points": "99", "response": "A"},
+            {"points": "70", "response": "B"},
+            {"points": "50", "response": "C"},
+            {"points": "30", "response": "D"},
+            {"points": "10", "response": "E"}
+        ],
+        "specialResponse": {}
     }
 ]
