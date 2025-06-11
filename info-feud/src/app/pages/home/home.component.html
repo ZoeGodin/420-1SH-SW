@@ -1,7 +1,25 @@
-<!-- <img src="assets/images/dainty.jpg" alt="image test" /> -->
-<input type="text" placeholder="Rename team 1" (blur)="changeTeamName('team1', $event)">
-<input type="text" placeholder="Rename team 2" (blur)="changeTeamName('team2', $event)">
-<button-component button-text="GAME 1" (buttonClick)="startGame('game1')"></button-component>
-<button-component button-text="GAME 2" (buttonClick)="startGame('game2')"></button-component>
-<button-component button-text="MIG-GAME" (buttonClick)="startGame('migame')"></button-component>
-<button-component button-text="DEMO" (buttonClick)="startGame('demo')"></button-component>
+<div id="homeDiv">
+    <div id="titleDiv">
+        <app-wavy-text text=" INFOFEUD "></app-wavy-text>
+    </div>
+    <div id="teamDiv">
+        <div id="team1">
+            <p id="team1Text">Renommer TEAM 1</p>
+            <input type="text" placeholder="Élèves" id="team1Input" (blur)="changeTeamName('team1', $event)">
+        </div>
+        <div id="team2">
+            <p id="team2Text">Renommer TEAM 2</p>
+            <input type="text" placeholder="Profs" id="team2Input" (blur)="changeTeamName('team2', $event)">
+        </div>
+    </div>
+    <div id="gamesDiv">
+        <div class="gameButtons">
+            <button-component button-text="GAME 1" (buttonClick)="startGame('game1')"></button-component>
+            <button-component button-text="MIG-GAME" (buttonClick)="startGame('migame')"></button-component>
+        </div>
+        <div class="gameButtons">
+            <button-component button-text="GAME 2" (buttonClick)="startGame('game2')"></button-component>
+            <button-component button-text="DEMO" (buttonClick)="startGame('demo')"></button-component>
+        </div>
+    </div>
+</div>

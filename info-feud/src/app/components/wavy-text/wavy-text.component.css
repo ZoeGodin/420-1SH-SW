@@ -1,0 +1,18 @@
+.wavy-letter {
+  display: inline-block;
+  animation: wave 1s ease-in-out infinite;
+  font-size: 6rem;
+  font-weight:bold;
+  color: black; 
+  margin: 0.5rem 0;
+  font-family:'Courier New', Courier, monospace;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

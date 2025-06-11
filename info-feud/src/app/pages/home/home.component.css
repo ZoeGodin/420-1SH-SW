@@ -3,12 +3,54 @@ img {
     margin-bottom: -20px;
 }
 
-#homePage {
+#homeDiv {
     display: flex;
     flex-grow: 1;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+#teamDiv {
+ display: flex;
+ justify-content: space-between;
+ align-self: stretch;
+}
+
+#team1 {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#team1Text {
+    font-size: 2rem;
+    font-weight:bold;
+    color: blue; 
+    margin: 0.5rem 0;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#team2 {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#team2Text {
+    font-size: 2rem;
+    font-weight:bold;
+    color: rgba(255, 196, 0, 0.904); 
+    margin: 0.5rem 0;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#gamesDiv {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 #modules {
@@ -37,4 +79,13 @@ img {
 
 .homeButton {
     margin: 28px;
+}
+
+.gameButtons {
+    display: flex;
+    flex-grow: 1;
+}
+
+button-component {
+    margin: 20px;
 }
