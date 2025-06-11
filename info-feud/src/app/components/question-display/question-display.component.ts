@@ -37,6 +37,7 @@ export class QuestionDisplayComponent implements OnInit{
   pointsToAdd = 0;
   team1Strikes = [false, false, false];
   team2Strikes = [false, false, false];
+  canAddPoints: boolean = true;
 
   constructor(public teamService: TeamService) {}
 
@@ -67,6 +68,7 @@ export class QuestionDisplayComponent implements OnInit{
   addToTeam(team: 'team1' | 'team2') {
     const points = Math.min(this.pointsToAdd, this.maximumPoints);
     this.teamService.addPoints(team, points);
+    this.canAddPoints = false;
   }
 
   //Forces the answers to reveal themselves- used when the teams have not found all answers and to trigger the rest of the game.

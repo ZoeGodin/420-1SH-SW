@@ -50,7 +50,7 @@
       <span class="strike-x" *ngIf="strike">✖</span>
     </div>
 
-    <ng-container *ngIf="revealedCount >= totalAnswers">
+    <ng-container *ngIf="revealedCount >= totalAnswers && canAddPoints">
       <button mat-button class="pointButtons" style="color: black" (click)="addToTeam('team1')">
         AJOUTER POINTS
       </button>
@@ -69,7 +69,7 @@
       <span class="strike-x" *ngIf="strike">✖</span>
     </div>
 
-    <ng-container *ngIf="revealedCount >= totalAnswers">
+    <ng-container *ngIf="revealedCount >= totalAnswers && canAddPoints">
       <button mat-button class="pointButtons" style="color: black" (click)="addToTeam('team2')">
         AJOUTER POINTS
       </button>

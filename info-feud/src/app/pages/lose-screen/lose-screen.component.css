@@ -1,0 +1,10 @@
+#lossDiv {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+img {
+    margin: 30px;
+}
