@@ -22,10 +22,18 @@ export class HomeComponent {
   }
 
   startGame(game: string){
+    this.letsGoAudioPlay();
     if(game === 'migame'){
       this.router.navigate(['/migame', game, 1])
     }else{
       this.router.navigate(['/question', game, 1])
     }
+  }
+
+  letsGoAudioPlay(){
+    let audio = new Audio;
+    audio.src = "assets/letsGo.mp3";
+    audio.load();
+    audio.play();
   }
 }

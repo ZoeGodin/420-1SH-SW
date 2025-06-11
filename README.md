@@ -21,7 +21,7 @@ Pour obtenir les données nécessaires au jeu et reproduire un environnement sem
 #### Création du logo
 Pour donner un air plus officiel et soigné au projet, un prompt a été saisi sur [Sora](https://sora.chatgpt.com/explore) afin de générer un logo dans un style inspiré des jeux télévisés.
 
-![InfoFeudLogo](/assets/InfoFeud.png)
+![InfoFeudLogo](info-feud/public/assets/InfoFeud.png)
 
 #### Programmation et nouvel élément
 Puisque le projet devait respecter les caractéristiques du cours `420-1SH-SW`, il devait inclure une technologie jamais utilisée auparavant dans la Technique. Pour créer un projet soigné incorporant des éléments déjà vus, la technologie choisie fut `Framer Motion`, une librairie permettant l’animation de composants dans Angular.

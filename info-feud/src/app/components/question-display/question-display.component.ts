@@ -68,10 +68,10 @@ export class QuestionDisplayComponent implements OnInit{
   }
 
   //Add points to a team after all answers (wether forced or not) are revealed
-  // TODO? (NTH) -> Block buttons to add once we have already added (boolean)
   addToTeam(team: 'team1' | 'team2') {
     const points = Math.min(this.pointsToAdd, this.maximumPoints);
     this.teamService.addPoints(team, points);
+    this.slayQueenMiguelAudioPlay();
     this.canAddPoints = false;
   }
 
@@ -105,6 +105,13 @@ export class QuestionDisplayComponent implements OnInit{
   nopeMathieuAudioPlay(){
     let audio = new Audio;
     audio.src = "assets/nopeMathieu.mp3";
+    audio.load();
+    audio.play();
+  }
+
+  slayQueenMiguelAudioPlay(){
+    let audio = new Audio;
+    audio.src = "assets/miguelQueen.mp3";
     audio.load();
     audio.play();
   }
