@@ -62,5 +62,13 @@
         "responses": [
             { "points": "100", "response": "Bro, c'est 1 kilo" }
         ]
+      },
+      {
+        "id": 9,
+        "type": "normal",
+        "question": "Pourquoi?",
+        "responses": [
+          {"points": "100", "response": "Oui"}
+        ]
       }
 ]

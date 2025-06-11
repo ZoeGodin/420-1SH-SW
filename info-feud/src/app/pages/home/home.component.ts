@@ -3,10 +3,11 @@ import { ButtonComponent } from '../../components/button-component/button-compon
 import { TeamService } from '../../services/team.service';
 import { QuestionsService } from '../../services/questions.service';
 import { Router } from '@angular/router';
+import { WavyTextComponent } from '../../components/wavy-text/wavy-text.component';
 
 @Component({
   selector: 'home-page',
-  imports: [ButtonComponent],
+  imports: [ButtonComponent, WavyTextComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

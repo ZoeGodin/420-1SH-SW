@@ -15,7 +15,7 @@
     {
         "id": 2,
         "type": "normal",
-        "question": "Quel est la meilleur chose a propos d'être un programmeur?",
+        "question": "Quel est la meilleur chose à propos d'être un programmeur?",
         "responses": [
           { "points": "7", "response": "Créativité" },
           { "points": "6", "response": "Horaires Flexibles" },
@@ -23,7 +23,7 @@
           { "points": "2", "response": "Technologies" },
           { "points": "2", "response": "Autonomie" }
         ],
-        "specialResponse": { "points": "5", "response": "Concierge" }
+        "specialResponse": { "points": "5", "response": "Sédentaire" }
       },
       {
         "id": 3,
@@ -54,7 +54,7 @@
     {
         "id": 5,
         "type": "flash",
-        "question": "Quel est votre langage de programation que vous detester le plus?",
+        "question": "Quel est le langage de programation que vous détester le plus?",
         "responses": [
             {"points": "15", "response": "Assembleur"},
             {"points": "7", "response": "Javascript"},

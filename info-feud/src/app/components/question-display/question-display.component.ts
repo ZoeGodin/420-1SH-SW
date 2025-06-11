@@ -60,7 +60,11 @@ export class QuestionDisplayComponent implements OnInit{
   toggleStrike(team: 'team1' | 'team2', index: number) {
     const arr = team === 'team1' ? this.team1Strikes : this.team2Strikes;
     arr[index] = !arr[index];
-    this.nopeAudioPlay();
+    if(team === 'team1'){
+      this.nopeJamesAudioPlay();
+    }else{
+      this.nopeMathieuAudioPlay();
+    }
   }
 
   //Add points to a team after all answers (wether forced or not) are revealed
@@ -91,9 +95,16 @@ export class QuestionDisplayComponent implements OnInit{
     }
   }
 
-  nopeAudioPlay(){
+  nopeJamesAudioPlay(){
     let audio = new Audio;
-    audio.src = "assets/nope.mp3";
+    audio.src = "assets/nopeJames.mp3";
+    audio.load();
+    audio.play();
+  }
+
+  nopeMathieuAudioPlay(){
+    let audio = new Audio;
+    audio.src = "assets/nopeMathieu.mp3";
     audio.load();
     audio.play();
   }
