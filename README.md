@@ -1,46 +1,48 @@
-# InfoFeud 2025
-## Développement d’un jeu style `Family Feud` pour la Technique d’informatique du Cégep de Shawinigan
+## Development of a `Family Feud`-Style Game for the Computer Science Program at Cégep de Shawinigan
 
-### Introduction
-Dans le cadre du cours de veille technologique (420-1SH-SW) du Cégep de Shawinigan, le projet suivant a pour but de développer un jeu de style télévisé (comme `La Guerre des Clans` ou `Family Feud` dans la version américaine) pour célébrer la fin du parcours scolaire de la cohorte 2025 de la Technique d’informatique du Cégep de Shawinigan.
+![Title Animated](info-feud/public/assets/title.gif)
 
-### Fonctionnement
-Le déroulement d’InfoFeud est semblable à celui des jeux dont il s’inspire : deux équipes s’affrontent dans le but de faire le plus de points pour accéder à la manche éclair et avoir la possibilité de gagner le prix final.
+[README (French)](README.fr.md)
 
-#### Manche normale
-L’animateur appelle une personne de chaque équipe pour venir répondre à la question. Le plus rapide a le droit de répondre et, si sa réponse donne des points, permet à son équipe de prendre la main. L’équipe a trois chances de remplir le tableau de réponses et de remporter tous les points possibles. Si elle échoue trois fois à donner des réponses valides, l’équipe adverse a le droit de se consulter pour essayer de donner une réponse figurant sur le tableau et ainsi voler les points. Si l’équipe adverse échoue également, les points vont à l’équipe initiale.
+### Introduction  
+As part of the Tech Watch course (420-1SH-SW) at Cégep de Shawinigan, the following project was designed to create a game in the style of classic TV game shows (like *La Guerre des Clans* or the American version *Family Feud*) to celebrate the graduation of the 2025 cohort of the Computer Science program.
 
-#### Manche éclair
-La manche éclair met en scène deux joueurs de la même équipe qui tentent de donner les réponses les plus populaires pour remporter le prix final. Le joueur 1 se met en place, tandis que le joueur 2 doit s’isoler le temps que le premier réponde. Chaque joueur dispose de 60 secondes pour répondre à toutes les questions.
+### How It Works  
+The structure of *InfoFeud* closely mirrors that of the shows it was inspired by: two teams compete to score the most points in order to reach the lightning round and win the final prize.
 
-### Développement
+#### Regular Round  
+The host calls one player from each team to answer a question. The fastest responder earns the right to answer first. If their answer scores points, their team gains control. The team then has three chances to fill the answer board and collect all possible points. If they fail three times, the opposing team can discuss and attempt to give a correct answer to steal the points. If they also fail, the original team keeps the points.
 
-#### Obtention des données
-Pour obtenir les données nécessaires au jeu et reproduire un environnement semblable à celui des émissions télévisées, nous avons créé un formulaire regroupant 36 questions portant sur la programmation et le métier de développeur, que nous avons envoyé aux étudiants de la Technique. S’en est suivi un travail d’une journée complète pour filtrer et attribuer des points aux réponses recueillies. Le résultat : un jeu comportant 36 questions et une centaine de réponses.
+#### Lightning Round  
+The lightning round features two players from the same team trying to give the most popular answers to a series of questions to win the final prize. Player 1 answers first while Player 2 is isolated. Each player has 60 seconds to answer all questions. To win, the players needs to gain 60% of all possible points.
 
-#### Création du logo
-Pour donner un air plus officiel et soigné au projet, un prompt a été saisi sur [Sora](https://sora.chatgpt.com/explore) afin de générer un logo dans un style inspiré des jeux télévisés.
+### Development
+
+#### Data Collection  
+To gather the necessary data and replicate a TV-style experience, we created a survey containing 36 questions related to programming and the developer profession. This survey was distributed to students in the program. A full day of work followed to sort and assign points to the collected responses. The result: a game with 36 questions and over a hundred valid answers.
+
+#### Logo Creation  
+To give the project a more polished and professional look, we used a prompt on [Sora](https://sora.chatgpt.com/explore) to generate a logo in the style of classic TV game shows.
 
 ![InfoFeudLogo](info-feud/public/assets/InfoFeud.png)
 
-#### Programmation et nouvel élément
-Puisque le projet devait respecter les caractéristiques du cours `420-1SH-SW`, il devait inclure une technologie jamais utilisée auparavant dans la Technique. Pour créer un projet soigné incorporant des éléments déjà vus, la technologie choisie fut `Framer Motion`, une librairie permettant l’animation de composants dans Angular.
+### Programming and New Features  
+Since the project had to incorporate a technology not previously used in the program, we chose to use `Framer Motion`, a library that enables component animation in Angular. This allowed us to create a sleek project while also integrating familiar tools and skills.
 
-### Résultats
+### Results  
+The final result is a game that effectively combines the animation features of the `motion` library with sound effects and creative work contributed by the cohort.
 
-> TO-DO
+### Bibliography
+- Animate. Motion for JavaScript. (n.d.). https://motion.dev/docs/animate  
+- Basic Syntax. Markdown Guide. (n.d.). https://www.markdownguide.org/basic-syntax/  
+- Web Animations for JavaScript, React and Vue. Motion. (n.d.). https://motion.dev/  
 
-### Bibliographie
-- Animate. Motion for JavaScript. (n.d.). https://motion.dev/docs/animate 
-- Basic syntax. Markdown Guide. (n.d.). https://www.markdownguide.org/basic-syntax/ 
-- Web animations for JavaScript, react and vue. Motion. (n.d.). https://motion.dev/ 
-### Prompts utilisés
-
-- Prompt pour le logo :  
+### Prompts Used
+- Prompt for the logo:  
     ```
     Make me a gameshow logo that is reminiscent of the oldstyle gameshows. The name of the gameshow is 'InfoFeud'. The name is separated in half, 'Info' is on top and 'feud' at the bottom
     ```
 
-### Crédits
-- **Ariane Courcy** — Aide à la création des questions | Cueillette de données | Aide aux tests | Co-animatrice  
-- **Marie-Christine Bélanger** — Aide à la correction
+### Credits
+- **Ariane Courcy** — Helped create the questions | Data collection | Testing | Co-host  
+- **Marie-Christine Bélanger** — Proofreading assistance
