@@ -52,7 +52,6 @@ export class FlashQuestionComponentComponent {
   }
 
   seeResults(){
-    console.log('see results')
     if(this.pointsWon < this.pointsToWin){
       this.router.navigate(['loss']);
     }else{
